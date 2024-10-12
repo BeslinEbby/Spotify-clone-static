@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --text-color:#909090;
+    --text-color:#B3B3B3;
+    --background: #121212;
+    --hover-background: #1F1F1F;
 }
 
 *{
@@ -13,6 +15,7 @@
 body{
     background: rgb(0, 0, 0);
     padding: 6px;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -20,12 +23,16 @@ a{
 }
 header{
     height: 52px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    padding: 4px;
-    padding-left: 16px;
+    padding: 4px 12px;
+    padding-left: 20px;
+    position: fixed;
+    top: 8px;
+    z-index: 1;
 }
 header .logo{
     width: 18%;
@@ -95,13 +102,13 @@ header .logo img{
     width: 32px;
 }
 .header-btns button{
-    width: 110px;
+    width: 108px;
     height: 48px;
     border: none;
     border-radius: 26px;
     font-weight: 700;
-    font-size: 0.95rem;
-    margin-left: 10px;
+    font-size: 0.9rem;
+    margin-left: 8px;
     cursor: pointer;
 }
 .header-first-btn{
@@ -113,11 +120,145 @@ header .logo img{
 }
 .header-first-btn:hover{
     color: white;
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 .header-second-btn:hover{
     background: #F0F0F0;
-    transform: scale(1.02);  
+    transform: scale(1.03);  
+}
+main{
+    display: flex;
+    height: 100vh;
+    gap: 8px;
+    overflow-y: hidden;
+}
+.left-sec{
+    width: 28%;
+    background-color: var(--background);
+    margin-top: 52px;
+    height: 82%;
+}
+.sidebar{
+    width: 100%;
+    height: 100%;
+    padding: 12px 8px;
+}
+.sidebar-head{
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    color: var(--text-color);
+}
+.sidebar-head h4{
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-head a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+}
+.sidebar-head h4:hover, .sidebar-head a:hover{
+    color: white;
+}
+.sidebar-scroll-sec{
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 300px;
+    padding: 12px 0;
+}
+.sidebar-scroll-sec:hover{
+    overflow-y: scroll;
+}
+.side-scroll-cnt{
+    background-color: var(--hover-background);
+    height: 136px;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.side-scroll-cnt h4{
+    font-size: .9rem;
+}
+.side-scroll-cnt p{
+    font-size: .8rem;
+}
+
+.side-scroll-btn{
+    width: max-content;
+    min-width: 130px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    padding: 6px 10px;
+    margin-top: 12px;
+    text-align: center;
+}
+.sidebar-footer{
+    width: 90%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+.sidebar-footer a{
+    font-size: 0.67rem;
+    color: var(--text-color);
+    margin-right: 8px;
+}
+.sidebar-foot-cookie a{
+    font-size: 0.8rem;
+    color: white;
+}
+.sidebar-foot-cookie a:hover{
+    text-decoration: underline;
+}
+
+.sidebar-foot-lng button{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 26px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 
+::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    width: 10px;
+}
+.sidebar-scroll-sec::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+}
