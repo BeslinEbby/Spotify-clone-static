@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --text-color:#B3B3B3;
@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 body{
     background: rgb(0, 0, 0);
@@ -35,7 +35,7 @@ header{
     z-index: 1;
 }
 header .logo{
-    width: 18%;
+    width: 15%;
 }
 header .logo img{
     width: 32px;
@@ -98,8 +98,11 @@ header .logo img{
     width: 1px;
     background-color: var(--text-color);
 }
-.search-bar img{
+.browse-bar img{
     width: 32px;
+}
+.search-bar:hover i{
+    color: white;
 }
 .header-btns button{
     width: 108px;
@@ -133,10 +136,11 @@ main{
     overflow-y: hidden;
 }
 .left-sec{
-    width: 28%;
+    width: 27%;
     background-color: var(--background);
-    margin-top: 52px;
+    margin-top: 56px;
     height: 82%;
+    border-radius: 8px;
 }
 .sidebar{
     width: 100%;
@@ -164,8 +168,11 @@ main{
 .sidebar-head a{
     font-size: 1.7rem;
     color: var(--text-color);
+    padding: 2px;
+    border-radius: 50%;
 }
-.sidebar-head h4:hover, .sidebar-head a:hover{
+.sidebar-head h4:hover,
+.sidebar-head a:hover{
     color: white;
 }
 .sidebar-scroll-sec{
@@ -249,16 +256,138 @@ main{
     justify-content: center;
     gap: 4px;
 }
+.right-sec{
+    width: 73%;
+    margin-top: 56px;
+    overflow-y: scroll;
+    background-color: var(--background);
+}
+.right-cnt{
+    padding: 12px 6px;
+}
+.right-sec{
+    position: relative;
+}
+.right-sec .new-bg{
+    position: absolute;
+    background: linear-gradient(180deg,#212121,var(--hover-background),var(--background));
+    width: 100%;
+    height: 200px;
+    z-index: 0;
+}
+#artist-sec{
+    position: relative;
+    z-index: 99;
+}
+.right-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: white;
+}
+.right-head .right-title{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 12px;
+}
+
+.right-head .right-show{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.right-head a:hover{
+    text-decoration: 2px solid underline;
+}
+
+.card-container{
+    display: flex; 
+    /* flex-wrap: wrap; */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card{
+    height: fit-content;
+    min-width: 180px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+.card:hover{
+    background-color: var(--hover-background);
+}
+.card-logo{
+    position: relative;
+}
+.card-logo img{
+    object-fit: cover;
+    height: 160px;
+    width: 100%;
+    border-radius: 6px;
+}
+.circled img{
+    border-radius: 50%;
+}
+.card-logo .play{
+    background-color: #1ED760;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transform: translateY(8px);
+}
+.card-logo .play:hover{
+    background-color: #3BE276;
+}
+.card-logo .play img{
+    width: 40%;
+    height: 40%;
+}
+.card a{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.card a:hover{
+    text-decoration: underline;
+}
+.card p{
+    font-size: 0.85rem;
+    color: var(--text-color);
+    height: 40px;
+    width: 100%;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card p a{
+    font-size: 0.85rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.card:hover .card-logo .play{
+    visibility: visible;
+    transform: translateY(0px);
+}
+#albums-sec .card{
+    min-height: 292px;
+}
 
 
-::-webkit-scrollbar{
-    display: none;
-}
-::-webkit-scrollbar-thumb{
-    background-color: gray;
-    width: 10px;
-}
-.sidebar-scroll-sec::-webkit-scrollbar{
-    display: block;
-    width: 10px;
-}
