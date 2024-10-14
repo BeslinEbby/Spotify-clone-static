@@ -390,4 +390,20 @@ main{
     min-height: 292px;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #5A5A5A;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #898989;
+}
+.sidebar-scroll-sec::-webkit-scrollbar,
+.right-sec::-webkit-scrollbar{
+    display: block;
+    width: 12px;
+    scrollbar-width: 40px;
+}
+
 
