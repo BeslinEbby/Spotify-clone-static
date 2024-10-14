@@ -368,8 +368,8 @@ main{
 .card p{
     font-size: 0.85rem;
     color: var(--text-color);
-    height: 40px;
     width: 100%;
+    /* height: 40px; */
     /* white-space: nowrap;
     text-overflow: ellipsis; */
     display: -webkit-box;
@@ -388,6 +388,40 @@ main{
 }
 #albums-sec .card{
     min-height: 292px;
+}
+footer{
+    padding: 28px;
+}
+.footer-first-sec{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    height: 260px;
+}
+.footer-first-sec div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-first-sec h4{
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.footer-first-sec a{
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.footer-first-sec .social-icons{
+    flex-direction: row;
+    width: 200px;
+}
+.footer-copy{
+    color: var(--text-color);
+    margin: 20px 0;
+    font-size: 0.9rem;
 }
 
 ::-webkit-scrollbar{
