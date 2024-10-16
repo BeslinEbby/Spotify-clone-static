@@ -35,6 +35,15 @@
             <button class="header-signup-btn sign-btn">Sign up</button>
             <button class="header-login-btn sign-btn">Log in</button>
          </div>
+         <div class="mobile-header">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="sign-btn">Open app</button>
+            <div class="burger-menu">
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+         </div>
       </header>
       <main>
          <section class="left-sec">
@@ -85,6 +94,7 @@
          <section class="right-sec">
             <div class="new-bg"></div>
             <div class="right-cnt">
+
                <section id="artist-sec">
                   <div class="right-head">
                      <a class="right-title">Popular artists</a>
@@ -121,7 +131,7 @@
                         <a>Sachin-Jigar</a>
                         <p>Artist</p>
                      </div>
-                     <div class="card">
+                     <div class="card sm-hide">
                         <div class="card-logo circled">
                            <img src="images/artist-images/arjit_singh.jpg" alt="" />
                            <div class="play">
@@ -131,7 +141,7 @@
                         <a>Arijit Singh</a>
                         <p>Artist</p>
                      </div>
-                     <div class="card">
+                     <div class="card md-hide">
                         <div class="card-logo circled">
                            <img src="images/artist-images/anirudh.jpg" alt="" />
                            <div class="play">
@@ -141,7 +151,7 @@
                         <a>Anirudh Ravichander</a>
                         <p>Artist</p>
                      </div>
-                     <div class="card">
+                     <div class="card lg-hide">
                         <div class="card-logo circled">
                            <img src="images/artist-images/atif.jpg" alt="" />
                            <div class="play">
@@ -190,7 +200,7 @@
                         <a>Aashiqui 2</a>
                         <p><a href="#">Mithoon</a>,<a href="#">Ankit Tiwari</a>, <a href="#">Jeet Gannguli</a></p>
                      </div>
-                     <div class="card">
+                     <div class="card sm-hide">
                         <div class="card-logo">
                            <img src="images/albums-images/jo_tum.jpg" alt="" />
                            <div class="play">
@@ -200,7 +210,7 @@
                         <a>Jo Tum Mere Ho</a>
                         <p><a href="#">Anuv Jain</a></p>
                      </div>
-                     <div class="card">
+                     <div class="card md-hide">
                         <div class="card-logo">
                            <img src="images/albums-images/making_memories.jpg" alt="" />
                            <div class="play">
@@ -210,7 +220,7 @@
                         <a>Making Memories</a>
                         <p><a href="#">Karan Aujla</a>,<a href="#"> Ikky</a></p>
                      </div>
-                     <div class="card">
+                     <div class="card lg-hide">
                         <div class="card-logo">
                            <img src="images/albums-images/aaj_ki_raat.jpg" alt="" />
                            <div class="play">
@@ -236,6 +246,7 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Arijit Singh Radio</a>
                         <p>With Mithoon, Sachin-Jigar, Jeet Gannguli and more</p>
                      </div>
                      <div class="card">
@@ -245,6 +256,7 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Dilijit Dosanjh Radio</a>
                         <p>With Karan Aujla, AP Dhillon, Shubh and more</p>
                      </div>
                      <div class="card">
@@ -254,37 +266,42 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Ilaiyaraaja Radio</a>
                         <p>With K. J. Yesudas, Swarnalatha, Uma Ramanan and more</p>
                      </div>
-                     <div class="card">
+                     <div class="card sm-hide">
                         <div class="card-logo">
                            <img src="images/radio-images/kk.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">KK Radio</a>
                         <p>With Armaan Malik, Atif Aslam, Mohit Chauhan and more</p>
                      </div>
-                     <div class="card">
+                     <div class="card md-hide">
                         <div class="card-logo">
                            <img src="images/radio-images/ar_rahman.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">A.R. Rahman Radio</a>
                         <p>With Anirudh Ravichander, Harris Jayaraj, Santhosh Narayanan and more</p>
                      </div>
-                     <div class="card">
+                     <div class="card lg-hide">
                         <div class="card-logo">
                            <img src="images/radio-images/udit.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Udit Narayan Radio</a>
                         <p>With Uttam Singh, Anuradha Paudwal, Abhijeet and more</p>
                      </div>
                   </div>
                </section>
+
                <section id="chart-sec">
                   <div class="right-head">
                      <a class="right-title">Featured Charts</a>
@@ -298,6 +315,7 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Top Songs - Global</a>
                         <p>Your weekly update of the most played tracks right now - Global.</p>
                      </div>
                      <div class="card">
@@ -307,8 +325,9 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Top Songs - USA</a>
                         <p>Your weekly update of the most played tracks right now - USA.</p>
-                     </div>
+                     </div>   
                      <div class="card">
                         <div class="card-logo">
                            <img src="images/chart-images/top50_global.jpg" alt="" />
@@ -316,38 +335,43 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Top 50 - Global</a>
                         <p>Your daily update of the most played tracks right now - Global.</p>
                      </div>
-                     <div class="card">
+                     <div class="card sm-hide">
                         <div class="card-logo">
                            <img src="images/chart-images/top50_usa.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Top 50 - USA</a>
                         <p>Your daily update of the most played tracks right now - USA.</p>
                      </div>
-                     <div class="card">
+                     <div class="card md-hide">
                         <div class="card-logo">
                            <img src="images/chart-images/viral50_global.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Viral 50 - Global</a>
                         <p>Your daily update of the most viral tracks right now - Global.</p>
                      </div>
-                     <div class="card">
+                     <div class="card lg-hide">
                         <div class="card-logo">
                            <img src="images/chart-images/viral50_usa.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Viral 50  - USA</a>
                         <p>Your daily update of the most viral tracks right now - USA.</p>
                      </div>
                   </div>
                </section>
-               <section>
+
+               <section id="playlist-sec">
                   <div class="right-head">
                      <a class="right-title">Spotify Playlists</a>
                      <a href="" class="right-show">Show all</a>
@@ -360,6 +384,7 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">POP RISING</a>
                         <p>Who's now and next in pop. Cover: Jenna Raine</p>
                      </div>
                      <div class="card">
@@ -369,6 +394,7 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Rock Classics</a>
                         <p>Rock legends & epic songs that continue to inspire generations. Cover: The Rolling Stones</p>
                      </div>
                      <div class="card">
@@ -378,65 +404,73 @@
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">lofi chill</a>
                         <p>Lazy slow lofi beats for laid-back moments.</p>
                      </div>
-                     <div class="card">
+                     <div class="card sm-hide">
                         <div class="card-logo">
                            <img src="images/playlist-images/indie_rock.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Indie Rock Hits</a>
                         <p>True indie rock hits. Cover: Phoebe Bridgers</p>
                      </div>
-                     <div class="card">
+                     <div class="card md-hide">
                         <div class="card-logo">
                            <img src="images/playlist-images/happy_hits.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Happy Hits</a>
                         <p>Hits to boost your mood and fill you with happiness!</p>
                      </div>
-                     <div class="card">
+                     <div class="card lg-hide">
                         <div class="card-logo">
                            <img src="images/playlist-images/calming.jpg" alt="" />
                            <div class="play">
                               <img src="images/icons/play-btn.png" alt="" />
                            </div>
                         </div>
+                        <a class="mobile-card-title">Calming Acoustic</a>
                         <p>Keep calm with instrumental acoustic tracks.</p>
                      </div>
                   </div>
                </section>
                <footer>
                   <section class="footer-first-sec">
-                     <div>
-                        <h4>Company</h4>
-                        <a href="#">About</a>
-                        <a href="#">Jobs</a>
-                        <a href="#">For The Record</a>
+                     <div class="md-footer">
+                        <div>
+                           <h4>Company</h4>
+                           <a href="#">About</a>
+                           <a href="#">Jobs</a>
+                           <a href="#">For The Record</a>
+                        </div>
+                        <div>
+                           <h4>Communities</h4>
+                           <a href="#">For Artists</a>
+                           <a href="#">Developers</a>
+                           <a href="#">Advertising</a>
+                           <a href="#">Investors</a>
+                           <a href="#">Vendors</a>
+                        </div>
                      </div>
-                     <div>
-                        <h4>Communities</h4>
-                        <a href="#">For Artists</a>
-                        <a href="#">Developers</a>
-                        <a href="#">Advertising</a>
-                        <a href="#">Investors</a>
-                        <a href="#">Vendors</a>
-                     </div>
-                     <div>
-                        <h4>Useful links</h4>
-                        <a href="#">Support</a>
-                        <a href="#">Free Mobile App</a>
-                     </div>
-                     <div>
-                        <h4>Spotify Plans</h4>
-                        <a href="#">Premium Individual</a>
-                        <a href="#">Premium Duo</a>
-                        <a href="#">Premium Family</a>
-                        <a href="#">Premium Student</a>
-                        <a href="#">Spotify Free</a>
+                     <div class="md-footer">
+                        <div>
+                           <h4>Useful links</h4>
+                           <a href="#">Support</a>
+                           <a href="#">Free Mobile App</a>
+                        </div>
+                        <div>
+                           <h4>Spotify Plans</h4>
+                           <a href="#">Premium Individual</a>
+                           <a href="#">Premium Duo</a>
+                           <a href="#">Premium Family</a>
+                           <a href="#">Premium Student</a>
+                           <a href="#">Spotify Free</a>
+                        </div>
                      </div>
                      <div class="social-icons">
                         <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
@@ -444,7 +478,22 @@
                         <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
                      </div>
                   </section>
+                  <div class="sidebar-footer mobile-footer">
+                     <div>
+                        <a href="">Legal</a>
+                        <a href="">Safety & Privacy center</a>
+                        <a href="">Privacy policy</a>
+                     </div>
+                     <div>
+                        <a href="">Cookies</a>
+                        <a href="">About ads</a>
+                        <a href="">Accessibility</a>
+                     </div>
+                     </div>
                   <div class="footer-copy">© 2024 Spotify AB</div>
+                  <div class="sidebar-foot-lng mobile-foot-lng">
+                     <button><img src="images/icons/language-icon.svg" alt="" /> English</button>
+                  </div>
                </footer>
             </div>
          </section>

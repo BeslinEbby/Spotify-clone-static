@@ -33,6 +33,7 @@ header {
    padding-left: 20px;
    position: fixed;
    top: 8px;
+   left: 0;
    z-index: 1;
 }
 header .logo {
@@ -130,6 +131,28 @@ header .logo img {
    background: #f0f0f0;
    transform: scale(1.03);
 }
+.mobile-header{
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   color: white;
+   display: none;
+}
+.mobile-header .sign-btn{
+   height: 32px;
+   font-size: 0.8rem;
+   width: 96px;
+}
+.burger-menu{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.burger-menu div{
+   width: 18px;
+   height: 2px;
+   background-color: white;
+}
 main {
    display: flex;
    height: 88vh;
@@ -138,6 +161,7 @@ main {
 }
 .left-sec {
    width: 27%;
+   min-width: 300px;
    height: 100%;
    background-color: var(--background);
    margin-top: 56px;
@@ -338,7 +362,7 @@ main {
 
 .card {
    height: fit-content;
-   min-width: 180px;
+   min-width: calc(100%/6);
    border-radius: 8px;
    padding: 8px 12px;
    display: flex;
@@ -392,6 +416,9 @@ main {
 .card a:hover {
    text-decoration: underline;
 }
+.mobile-card-title{
+   display: none;
+}
 .card p {
    font-size: 0.85rem;
    color: var(--text-color);
@@ -414,7 +441,7 @@ main {
    transform: translateY(0px);
 }
 #albums-sec .card {
-   min-height: 292px;
+   min-height: 260px;
 }
 footer {
    padding: 80px 28px;
@@ -426,7 +453,11 @@ footer {
    border-bottom: 1px solid var(--hover-background);
    height: 220px;
 }
-.footer-first-sec div {
+.footer-first-sec .md-footer {
+   display: flex;
+   gap: 72px;
+}
+.md-footer div {
    display: flex;
    flex-direction: column;
    gap: 12px;
@@ -446,8 +477,12 @@ footer {
    text-decoration: underline;
 }
 .footer-first-sec .social-icons {
+   display: flex;
+   gap: 16px;
    flex-direction: row;
    width: 200px;
+   height: 100%;
+   min-height: 80px;
    justify-content: end;
 }
 .footer-first-sec .social-icons a {
@@ -469,6 +504,16 @@ footer {
    margin: 32px 0;
    font-size: 0.85rem;
    font-weight: 500;
+}
+.mobile-footer{
+   display: none;
+   padding: 0;
+   width: 100%;
+   height: fit-content;
+   margin-top: 40px;
+}
+.mobile-foot-lng{
+   display: none;
 }
 .signup-banner {
    display: flex;
@@ -509,4 +554,124 @@ footer {
    display: block;
    width: 12px;
    scrollbar-width: 40px;
+}
+
+@media (max-width:1350px){
+    .lg-hide{
+        display: none;
+    }
+    .card{
+        width: calc(100%/5);
+    }
+}
+@media (max-width:1150px){
+    .md-hide{
+        display: none;
+    }
+    .card{
+        width: calc(100%/4);
+    }
+}
+@media (max-width:1050px){
+   body{
+      padding: 0;
+   }
+    .sm-hide, .md-hide, .lg-hide{
+        display: block;
+    }
+    header{
+      padding: 8px 20px;
+      top: 0;
+    }
+    .header-mid-sec, .header-btns, .left-sec, .new-bg, .signup-banner{
+        display: none;
+    }
+    .mobile-header{
+      display: flex;
+    }
+    main{
+      height: 100vh;
+    }
+    .right-sec{
+        width: 100%;
+        height: 100%;
+        padding-top: 12px;
+    }
+    .right-sec::-webkit-scrollbar{
+      width: 2px;
+      display: none;
+    }
+    .right-head .right-show {
+        display: none;
+    }
+    .right-head .right-title{
+      font-size: 1.1rem;
+   }
+   .right-head .right-title:hover{
+       text-decoration: none;
+
+    }
+    .card-container{
+        overflow-x: scroll;
+    }
+    .card{
+        min-width: 180px;
+    }
+    .card p{
+        display: none;
+    }
+    .card-logo .play{
+      display: none;
+    }
+    .card a:hover {
+      text-decoration: none;
+   }
+    .mobile-card-title{
+      display: block;
+    }
+    #albums-sec .card{
+      min-height: fit-content;
+    }
+    .circled img{
+        border-radius: 8px;
+    }
+    footer{
+      padding: 40px 12px;
+    }
+    .footer-first-sec{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .footer-first-sec .social-icons {
+        justify-content: start;
+        margin-top: 20px;
+    }
+    .footer-first-sec .md-footer{
+      gap: 240px;
+    }
+    .mobile-footer{
+      display: flex;
+      flex-direction: row;
+    }
+    .mobile-footer a{
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .mobile-foot-lng{
+      display: block;
+      margin-bottom: 32px;
+   }
+   .footer-copy{
+      margin: 12px 0;
+   }
+}
+
+@media (max-width:650px){
+   .footer-first-sec .md-footer{
+      gap: 48px;
+      flex-direction: column;
+    }
+    .mobile-footer{
+      flex-direction: column;
+    }
 }
